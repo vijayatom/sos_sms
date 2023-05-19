@@ -16,7 +16,7 @@ from twilio.rest import Client
 
 def send_message(body, to):
     account_sid = "AC5f879e1950492316bd67150703f0aee2"
-    auth_token = "84385c74b21d11aa856f9ee64e74d1c9" 
+    auth_token = "" 
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=body,
@@ -28,7 +28,7 @@ def send_message(body, to):
 st.title("Send Alert Message")
 
 body = ("(🚨🚨🚨I am in Trouble🚨🚨🚨 //// 🚨🚨🚨I NEED HELP🚨🚨🚨)")
-to = ("+919360214003")
+to = ("")
 
 if st.columns(3)[1].button("SOS Button"):
     message_sid = send_message(body, to)
